@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Label Content="HELLO WORLffgD !" HorizontalAlignment="Left" Margin="359,202,0,0" VerticalAlignment="Top"/>
+        <Label Content="Coucou Dani !" HorizontalAlignment="Left" Margin="359,202,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
