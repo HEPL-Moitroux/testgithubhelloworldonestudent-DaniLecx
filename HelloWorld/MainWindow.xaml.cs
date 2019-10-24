@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace HelloWorld
 {
@@ -23,6 +24,14 @@ namespace HelloWorld
         public MainWindow()
         {
             InitializeComponent();
+            WindowState = WindowState.Maximized;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            tbHw.Visibility = Visibility.Visible;
+            BtnBegin.Visibility = Visibility.Hidden;
+
         }
     }
 }
