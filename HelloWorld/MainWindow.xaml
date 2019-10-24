@@ -8,7 +8,40 @@
         WindowStartupLocation="CenterScreen"
         Title="Bienvenue" Height="450" Width="800">
     <Grid>
-        <Button Content="Clique" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="Button_Click"/>
+        <Grid.Background>
+            <LinearGradientBrush x:Name="lgb1" EndPoint="0.983,0.326" StartPoint="0.151,0.32">
+                <GradientStop Color="#FF2ABF1B"/>
+                <GradientStop Color="#FF1CB4A6" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button x:Name="BtnBegin"  Content="Begin" HorizontalAlignment="Center" VerticalAlignment="Center" Width="75" Click="Button_Click" Background="#FFA2C2BF" FontFamily="Cambria" FontSize="14">
 
+        </Button>
+
+        <DockPanel>
+           
+            <TextBlock
+                Name="tbHw"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Visibility="Hidden"
+                FontSize="48" FontWeight="Bold" Foreground="#FFFAF2A9">
+                Hello World
+
+                <TextBlock.Triggers>
+                    <EventTrigger RoutedEvent="TextBlock.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                                  Storyboard.TargetName="tbHw" 
+                                  Storyboard.TargetProperty="(TextBlock.Opacity)"
+                                  From="1.0" To="0.0" Duration="0:0:5" 
+                                  AutoReverse="True" RepeatBehavior="Forever" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </TextBlock.Triggers>
+            </TextBlock>
+        </DockPanel>
     </Grid>
 </Window>
